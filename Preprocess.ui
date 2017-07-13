@@ -1,0 +1,3041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>891</width>
+    <height>748</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="main">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>851</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="moveFiles">
+    <attribute name="title">
+     <string>Move Files</string>
+    </attribute>
+    <widget class="QLabel" name="rawDataPathLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>621</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Location of Raw Data (If connecting to the server, use Volumes for Mac; Files for Windows):</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="moveMakeFMRs">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>490</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generate FMRs from FMR tab</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addMoveRow">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>560</y>
+       <width>114</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Row</string>
+     </property>
+    </widget>
+    <widget class="QTableWidget" name="moveTable">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>421</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <property name="rowCount">
+      <number>1</number>
+     </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>121</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>4</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>28</number>
+     </attribute>
+     <row/>
+     <column>
+      <property name="text">
+       <string>Raw Data Files Folder</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Exp Folder Name</string>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+     </column>
+     <item row="0" column="1">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="pageUp">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>230</y>
+       <width>114</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>^ Page Up</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="moveSubNumber">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>110</y>
+       <width>51</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="setMoveDataPath">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>160</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="currentPageLabel">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>350</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Current Page:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pageDown">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>290</y>
+       <width>114</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>v Page Down</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addPage">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>260</y>
+       <width>171</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>+ Add Blank Page</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="moveDataPathLabel">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>211</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Output Path</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="moveSubNumberLabel">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>90</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sub Number</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="moveRawExpName">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>110</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string>Raw Data Experiment Name</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="moveRawExpNameLabel">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>175</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Raw Data Experiment Name</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="moveDataPath">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>160</y>
+       <width>781</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="tabChangesFocus">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string>This should be the folder that houses the Anatomy and Experiment folders - this should not be the Experiment folder itself</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="dateMRICheckBox">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>90</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Date (if more than one)</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateMRI">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>110</y>
+       <width>101</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="date">
+      <date>
+       <year>2089</year>
+       <month>11</month>
+       <day>16</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QLabel" name="currentPage">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>350</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>801</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>801</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>88</y>
+       <width>16</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>811</x>
+       <y>88</y>
+       <width>21</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="movefMRINumberLabel">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>90</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>fMRI Number</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="movefMRINumber">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>110</y>
+       <width>61</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>999</number>
+     </property>
+     <property name="value">
+      <number>100</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="makeDuplicatePage">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>260</y>
+       <width>171</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>+ Add Duplicate Page</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="moveMakeVMRs">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>510</y>
+       <width>261</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generate VMRs using VMR tab</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="moveSavePages">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>380</y>
+       <width>114</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Pages</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="moveLoadPages">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>380</y>
+       <width>114</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Load Pages</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="rawDataPath">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>801</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>/Volumes/rcbiData/Brad/exp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>/Volumes/rcbiData/Jessica/exp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>\Files\\rcbiData\Brad\exp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>\Files\\rcbiData\Jessica\exp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>/rcbiData/Brad/exp</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>/rcbiData/Jessica/exp</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="rawDataPathAddAnother">
+     <property name="geometry">
+      <rect>
+       <x>700</x>
+       <y>32</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Another</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="skipPage">
+     <property name="geometry">
+      <rect>
+       <x>474</x>
+       <y>230</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>SKIP PAGE</string>
+     </property>
+    </widget>
+    <zorder>moveDataPath</zorder>
+    <zorder>rawDataPathLabel</zorder>
+    <zorder>moveMakeFMRs</zorder>
+    <zorder>addMoveRow</zorder>
+    <zorder>moveTable</zorder>
+    <zorder>pageUp</zorder>
+    <zorder>moveSubNumber</zorder>
+    <zorder>setMoveDataPath</zorder>
+    <zorder>currentPageLabel</zorder>
+    <zorder>pageDown</zorder>
+    <zorder>addPage</zorder>
+    <zorder>moveDataPathLabel</zorder>
+    <zorder>moveSubNumberLabel</zorder>
+    <zorder>moveRawExpName</zorder>
+    <zorder>moveRawExpNameLabel</zorder>
+    <zorder>dateMRICheckBox</zorder>
+    <zorder>dateMRI</zorder>
+    <zorder>currentPage</zorder>
+    <zorder>line</zorder>
+    <zorder>line_2</zorder>
+    <zorder>line_3</zorder>
+    <zorder>line_4</zorder>
+    <zorder>movefMRINumberLabel</zorder>
+    <zorder>movefMRINumber</zorder>
+    <zorder>makeDuplicatePage</zorder>
+    <zorder>moveMakeVMRs</zorder>
+    <zorder>moveSavePages</zorder>
+    <zorder>moveLoadPages</zorder>
+    <zorder>rawDataPath</zorder>
+    <zorder>rawDataPathAddAnother</zorder>
+    <zorder>skipPage</zorder>
+   </widget>
+   <widget class="QWidget" name="preprocessFiles">
+    <attribute name="title">
+     <string>Preprocess Data</string>
+    </attribute>
+    <widget class="QTableWidget" name="subjectTable">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>791</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="dragEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="rowCount">
+      <number>1</number>
+     </property>
+     <property name="columnCount">
+      <number>3</number>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>100</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>20</number>
+     </attribute>
+     <row/>
+     <column>
+      <property name="text">
+       <string>Subject No.</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>fMRI ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Folder Path</string>
+      </property>
+     </column>
+     <item row="0" column="2">
+      <property name="text">
+       <string>Double-click cell to browse to folder</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="preprocessAddRow">
+     <property name="geometry">
+      <rect>
+       <x>711</x>
+       <y>0</y>
+       <width>114</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Row</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="loadSettings">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>0</y>
+       <width>114</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Load Settings</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="saveSettings">
+     <property name="geometry">
+      <rect>
+       <x>24</x>
+       <y>0</y>
+       <width>114</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Save Settings</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="preprocess">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>260</y>
+       <width>791</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabFMR">
+      <attribute name="title">
+       <string>FMR</string>
+      </attribute>
+      <widget class="QGroupBox" name="fmrSGS">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>300</y>
+         <width>221</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QDoubleSpinBox" name="fmrSGSvalue">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>62</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <double>6.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="fmrSGSunit">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>61</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>mm</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>mm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>px</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="fmrFWHMLabel">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>13</y>
+          <width>62</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>FWHM</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="MoCo">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>521</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QCheckBox" name="existsTargetFMR">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Align to First Run</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="targetVolNum">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>10</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="targetVolNumLabel">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>10</y>
+          <width>101</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Volume to Align</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="mocoInterpolationMethod">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>100</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>Trilinear / Trilinear</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Trilinear / Trilinear</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Trilinear / Sinc</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sinc / Sinc</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QCheckBox" name="useFullDataset">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Use Full Data Set</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="maxNumIterations">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>40</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="maxNumIterationsLabel">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>40</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Maximum Iterations</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="createMovies">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Create Movies</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="createExtendedLogFile">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>181</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Create Extended Log File</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mocoInterpolationMethodLabel">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>80</y>
+          <width>221</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Detection / Interpolation Method</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QCheckBox" name="doMotionCorrection">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>200</y>
+         <width>171</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Motion Correction (3)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="doTemporalSmoothing">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>210</y>
+         <width>201</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Temporal Smoothing (5)</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="TGS">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>230</y>
+         <width>221</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QDoubleSpinBox" name="TGSvalue">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>62</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <double>20.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="TGSunit">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>51</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>s</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>s</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>TR</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="TGSunitLabel">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>13</y>
+          <width>71</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Unit Time</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QCheckBox" name="doTemporalHighPassFiltering">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>140</y>
+         <width>241</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Temporal High Pass Filtering (4)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="STC">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>20</y>
+         <width>281</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QComboBox" name="sliceOrder">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>261</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>2 - ascending interleaved even-odd</string>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>0 - ascending</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1 - ascending interleaved odd-even</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2 - ascending interleaved even-odd</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10 - descending</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>11 - descending interleaved odd-even</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>12 - descending interleaved even-odd</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="stcInterpolationMethod">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>111</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>Sinc</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Trilinear</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Sinc</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="stcInterpolationMethodLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>141</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Interpolation Method</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="sliceOrderLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Slice Order</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="THP">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>160</y>
+         <width>221</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QDoubleSpinBox" name="THPvalue">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>62</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <double>2.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="THPunit">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>111</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentText">
+         <string>cycles</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>cycles</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Hz</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="FMR">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>0</y>
+         <width>481</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QSpinBox" name="skipVols">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="value">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="skipVolsLabel">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>60</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Volumes to Skip</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="numSlices">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>30</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="sizeX">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>120</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="value">
+         <number>64</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="mosaicSizeY">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>90</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>990</number>
+        </property>
+        <property name="value">
+         <number>384</number>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="mosaicSizeX">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>60</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="value">
+         <number>384</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="numSlicesLabel">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>90</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Slices per DICOM</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="createAMR">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>10</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Create AMR</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="sizeY">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>150</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="value">
+         <number>64</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mosaicSizeXLabel">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>60</y>
+          <width>241</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Image Dimension in Volumes (x)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="mosaicSizeYLabel">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>90</y>
+          <width>241</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Image Dimension in Volumes (y)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="sizeXLabel">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>120</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Dimension of Image (x)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="sizeYLabel">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>150</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Dimension of Image (y)</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="byteSwap">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>30</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Swap Bytes</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="bytesPerPixel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="value">
+         <number>2</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="bytesPerPixelLabel">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>150</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Bytes per Pixel</string>
+        </property>
+       </widget>
+       <widget class="QSpinBox" name="numImgPerVol">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>120</y>
+          <width>57</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+       <widget class="QLabel" name="numImgPerVolLabel">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>120</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>DICOMS per Volume</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="fileType">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>111</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>DICOM</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>DICOM</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="fileTypeLabel">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>30</y>
+          <width>61</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>File Type</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="projectSettingsLabel">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>5</y>
+          <width>231</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>General FMR Project Settings (1)</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QCheckBox" name="fmrDoSpatialSmoothing">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>280</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Spatial Smoothing (6)</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="doSliceTimeCorrection">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>0</y>
+         <width>201</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Slice Time Correction (2)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabVMR">
+      <attribute name="title">
+       <string>VMR</string>
+      </attribute>
+      <widget class="QLabel" name="vmrFileTypeLabel">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>20</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>File Type</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="vmrFileType">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>111</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>DICOM</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>DICOM</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSpinBox" name="vmrNumSlices">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>57</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>9999</number>
+       </property>
+       <property name="value">
+        <number>192</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vmrNumSlicesLabel">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>53</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Number of Slices</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="vmrIsLittleEndian">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>171</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Little Endian Byte Order</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vmrSizeXLabel">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>110</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Dimension of Image (x)</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="vmrSizeX">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>57</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+       <property name="value">
+        <number>256</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="vmrSizeY">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>57</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+       <property name="value">
+        <number>256</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vmrSizeYLabel">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>140</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Dimension of Image (y)</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="vmrBytesPerPixel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>170</y>
+         <width>57</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>2</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vmrBytesPerPixelLabel">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>170</y>
+         <width>171</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Number of Bytes Per Pixel</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="makeISO">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>20</y>
+         <width>171</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Transform to Iso-Voxel</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="makeSAG">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>40</y>
+         <width>241</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;BEWARE:&lt;/span&gt; BrainVoyager cannot yet script conversion into saggital slices and then reorient between neurological and radiological convention. Therefore, performing the Transform to Saggital Orientation step may lead your data to be flipped saggitally.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Transform to Saggital Orientation</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="makeIIHC">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>60</y>
+         <width>241</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Correct Intensity Inhomogeneities</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="makeTAL">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>80</y>
+         <width>241</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Transform to ACPC and TAL</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="vmrISOInterpolationMethod">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>18</y>
+         <width>121</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Cubic Spline</string>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Trilinear</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cubic Spline</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sinc</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="vmrISOInterpolationMethodLabel">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>22</y>
+         <width>141</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Interpolation Method</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabVTC">
+      <attribute name="title">
+       <string>VTC</string>
+      </attribute>
+      <widget class="QGroupBox" name="vtcSGS">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>6</y>
+         <width>191</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QDoubleSpinBox" name="vtcSGSvalue">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>1</y>
+          <width>62</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="decimals">
+         <number>1</number>
+        </property>
+        <property name="singleStep">
+         <double>0.500000000000000</double>
+        </property>
+        <property name="value">
+         <double>6.000000000000000</double>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="vtcSGSunit">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>1</y>
+          <width>71</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="currentText">
+         <string>mm</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>mm</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>px</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="vtcFWHMLabel">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>3</y>
+          <width>51</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>FWHM</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QCheckBox" name="vtcDoSpatialSmoothing">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Smoothed Analysis</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="vtcNotSpatialSmoothing">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>10</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Unsmoothed Analysis</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="resolution">
+       <property name="geometry">
+        <rect>
+         <x>177</x>
+         <y>60</y>
+         <width>91</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>1x1x1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2x2x2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>3x3x3</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="resolutionLabel">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>63</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Resolution</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="vtcInterpolationMethodLabel">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>36</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Interpolation Method</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="vtcInterpolationMethod">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>35</y>
+         <width>151</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Nearest Neighbor</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Trilinear</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sinc</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QSpinBox" name="bboxThreshold">
+       <property name="geometry">
+        <rect>
+         <x>621</x>
+         <y>60</y>
+         <width>57</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>999</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="bboxThresholdLabel">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>64</y>
+         <width>231</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Bounding Box Intensity Threshold</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="vtcDataType">
+       <property name="geometry">
+        <rect>
+         <x>177</x>
+         <y>35</y>
+         <width>151</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Integer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Float</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="vtcDataTypeLabel">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>36</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Data Format Type</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="vtcMakeMTCs">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>110</y>
+         <width>341</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Make MTCs Using Parameters in MTC Tab</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="vtcMakeSDMs">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>90</y>
+         <width>381</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Make SDMs Using Parameters in SDM Tab (Except MDMs)</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="brainSpace">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>110</y>
+         <width>141</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Native Space</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ACPC Space</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TAL Space</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="vtcAlignToFirstRun">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>87</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Aligned to First Run</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabSDM">
+      <attribute name="title">
+       <string>SDM</string>
+      </attribute>
+      <widget class="QCheckBox" name="skipFirstPredictor">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>181</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Skip First Predictor</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="includeConstantCondition">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>231</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Include Constant Condition</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="sdmMakeMDMs">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>10</y>
+         <width>341</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Generate MDMs Using Parameters in MDM Tab</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="modelMotionAsConfound">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>35</y>
+         <width>371</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Model Motion as Confound (Instead of Predictor)</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="numberOfPRTConfounds">
+       <property name="geometry">
+        <rect>
+         <x>12</x>
+         <y>85</y>
+         <width>57</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="numberOfPRTConfoundsLabel">
+       <property name="geometry">
+        <rect>
+         <x>72</x>
+         <y>88</y>
+         <width>251</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Number of PRT Confound Predictors</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabMDM">
+      <attribute name="title">
+       <string>MDM</string>
+      </attribute>
+      <widget class="QCheckBox" name="singleSubject">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>131</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Single Subject</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="group">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Group</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="whichRuns">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>10</y>
+         <width>111</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>All Runs</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Odd Runs</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Even Runs</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="designType">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>40</y>
+         <width>61</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>sdm</string>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>sdm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rtc</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="whichRunsLabel">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Use Runs:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="designTypeLabel">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>40</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Design Type:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="mdmType">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>70</y>
+         <width>131</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Volume Space</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Surface Space</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="os">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>100</y>
+         <width>81</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Mac</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Windows</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="osLabel">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>100</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OS:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="mdmTypeLabel">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>70</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Module:</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tabMTC">
+      <attribute name="title">
+       <string>MTC</string>
+      </attribute>
+      <widget class="QDoubleSpinBox" name="samplingDepthWM">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>10</y>
+         <width>62</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>-100.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.500000000000000</double>
+       </property>
+       <property name="value">
+        <double>-1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="samplingDepthGM">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>10</y>
+         <width>62</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>1</number>
+       </property>
+       <property name="minimum">
+        <double>-100.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.500000000000000</double>
+       </property>
+       <property name="value">
+        <double>3.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="samplingDepthGMLabel">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>14</y>
+         <width>211</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sampling Depth of Grey Matter</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="samplingDepthWMLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>14</y>
+         <width>221</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Sampling Depth of White Matter</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="mtcTemplateSurfaceBool">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>611</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Make with SRF Template (Beware: an MTC can only be opened with the SRF used to create it)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="mtcTemplateSurfacePathRH">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>561</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Right Hemisphere of Template Surface Mesh</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="mtcTemplateSurfacePathLH">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>561</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Left Hemisphere of Template Surface Mesh</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="talTemplate">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>230</y>
+       <width>791</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>/cantlonData/GENERAL_RESOURCES/BrainVoyager Resources/Templates and Maps/colin/colin_TAL.vmr</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="setTalTemplate">
+     <property name="geometry">
+      <rect>
+       <x>790</x>
+       <y>230</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="restoreDefaults">
+     <property name="geometry">
+      <rect>
+       <x>236</x>
+       <y>0</y>
+       <width>181</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Restore Default Settings</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QDialogButtonBox" name="decisionButton">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>710</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="participantType">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>710</y>
+     <width>91</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="currentText">
+    <string>Sub</string>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>Adult</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Kid</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sub</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="prtNamingSchemeLabel">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>714</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PRT Naming Scheme Using:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="prtNamingScheme">
+   <property name="geometry">
+    <rect>
+     <x>304</x>
+     <y>711</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>Experiment-Specific ID</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Individual-Specific ID</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>rawDataPath</tabstop>
+  <tabstop>rawDataPathAddAnother</tabstop>
+  <tabstop>moveRawExpName</tabstop>
+  <tabstop>moveSubNumber</tabstop>
+  <tabstop>movefMRINumber</tabstop>
+  <tabstop>dateMRICheckBox</tabstop>
+  <tabstop>dateMRI</tabstop>
+  <tabstop>moveDataPath</tabstop>
+  <tabstop>setMoveDataPath</tabstop>
+  <tabstop>moveTable</tabstop>
+  <tabstop>pageUp</tabstop>
+  <tabstop>makeDuplicatePage</tabstop>
+  <tabstop>addPage</tabstop>
+  <tabstop>pageDown</tabstop>
+  <tabstop>moveSavePages</tabstop>
+  <tabstop>moveLoadPages</tabstop>
+  <tabstop>addMoveRow</tabstop>
+  <tabstop>moveMakeFMRs</tabstop>
+  <tabstop>moveMakeVMRs</tabstop>
+  <tabstop>participantType</tabstop>
+  <tabstop>main</tabstop>
+  <tabstop>subjectTable</tabstop>
+  <tabstop>saveSettings</tabstop>
+  <tabstop>loadSettings</tabstop>
+  <tabstop>preprocessAddRow</tabstop>
+  <tabstop>talTemplate</tabstop>
+  <tabstop>setTalTemplate</tabstop>
+  <tabstop>preprocess</tabstop>
+  <tabstop>fileType</tabstop>
+  <tabstop>skipVols</tabstop>
+  <tabstop>numSlices</tabstop>
+  <tabstop>numImgPerVol</tabstop>
+  <tabstop>bytesPerPixel</tabstop>
+  <tabstop>createAMR</tabstop>
+  <tabstop>byteSwap</tabstop>
+  <tabstop>mosaicSizeX</tabstop>
+  <tabstop>mosaicSizeY</tabstop>
+  <tabstop>sizeX</tabstop>
+  <tabstop>sizeY</tabstop>
+  <tabstop>doSliceTimeCorrection</tabstop>
+  <tabstop>sliceOrder</tabstop>
+  <tabstop>stcInterpolationMethod</tabstop>
+  <tabstop>doMotionCorrection</tabstop>
+  <tabstop>existsTargetFMR</tabstop>
+  <tabstop>useFullDataset</tabstop>
+  <tabstop>createMovies</tabstop>
+  <tabstop>createExtendedLogFile</tabstop>
+  <tabstop>targetVolNum</tabstop>
+  <tabstop>maxNumIterations</tabstop>
+  <tabstop>mocoInterpolationMethod</tabstop>
+  <tabstop>doTemporalHighPassFiltering</tabstop>
+  <tabstop>THPvalue</tabstop>
+  <tabstop>THPunit</tabstop>
+  <tabstop>doTemporalSmoothing</tabstop>
+  <tabstop>TGSvalue</tabstop>
+  <tabstop>TGSunit</tabstop>
+  <tabstop>fmrDoSpatialSmoothing</tabstop>
+  <tabstop>fmrSGSvalue</tabstop>
+  <tabstop>fmrSGSunit</tabstop>
+  <tabstop>vmrFileType</tabstop>
+  <tabstop>vmrNumSlices</tabstop>
+  <tabstop>vmrIsLittleEndian</tabstop>
+  <tabstop>vmrSizeX</tabstop>
+  <tabstop>vmrSizeY</tabstop>
+  <tabstop>vmrBytesPerPixel</tabstop>
+  <tabstop>makeISO</tabstop>
+  <tabstop>makeSAG</tabstop>
+  <tabstop>makeIIHC</tabstop>
+  <tabstop>makeTAL</tabstop>
+  <tabstop>vmrISOInterpolationMethod</tabstop>
+  <tabstop>vtcDoSpatialSmoothing</tabstop>
+  <tabstop>vtcSGSvalue</tabstop>
+  <tabstop>vtcSGSunit</tabstop>
+  <tabstop>vtcDataType</tabstop>
+  <tabstop>resolution</tabstop>
+  <tabstop>brainSpace</tabstop>
+  <tabstop>vtcNotSpatialSmoothing</tabstop>
+  <tabstop>vtcInterpolationMethod</tabstop>
+  <tabstop>bboxThreshold</tabstop>
+  <tabstop>vtcMakeSDMs</tabstop>
+  <tabstop>vtcMakeMTCs</tabstop>
+  <tabstop>skipFirstPredictor</tabstop>
+  <tabstop>includeConstantCondition</tabstop>
+  <tabstop>sdmMakeMDMs</tabstop>
+  <tabstop>modelMotionAsConfound</tabstop>
+  <tabstop>singleSubject</tabstop>
+  <tabstop>group</tabstop>
+  <tabstop>whichRuns</tabstop>
+  <tabstop>designType</tabstop>
+  <tabstop>mdmType</tabstop>
+  <tabstop>os</tabstop>
+  <tabstop>samplingDepthWM</tabstop>
+  <tabstop>samplingDepthGM</tabstop>
+  <tabstop>mtcTemplateSurfaceBool</tabstop>
+  <tabstop>mtcTemplateSurfacePathRH</tabstop>
+  <tabstop>mtcTemplateSurfacePathLH</tabstop>
+  <tabstop>decisionButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>decisionButton</sender>
+   <signal>accepted()</signal>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>600</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>decisionButton</sender>
+   <signal>rejected()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>500</x>
+     <y>600</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

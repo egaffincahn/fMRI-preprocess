@@ -1,0 +1,97 @@
+NrOfRows: 1
+		Double-click cell to browse to folder	
+
+
+
+PARAMETERS (WARNING - DO NOT EDIT THE TEXT TO THE LEFT OF THE TAB BREAKS):
+
+ProjectTab:	0 (corresponds to the tab index starting with 0, as grouped below)
+TalTemplate:	/cantlonData/GENERAL_RESOURCES/BrainVoyager Resources/Templates and Maps/colin/colin_TAL.vmr
+ParticipantType:	Sub
+PRTNamingScheme:	Experiment-Specific ID
+
+widget(FMR).fmrSGS.enabled:	false
+widget(FMR).fmrSGS.fmrSGSvalue.value:	6
+widget(FMR).fmrSGS.fmrSGSunit.currentText:	mm
+widget(FMR).MoCo.enabled:	true
+widget(FMR).MoCo.existsTargetFMR.checked:	true
+widget(FMR).MoCo.targetVolNum.value:	1
+widget(FMR).MoCo.mocoInterpolationMethod.currentText:	Trilinear / Trilinear
+widget(FMR).MoCo.useFullDataset.checked:	false
+widget(FMR).MoCo.maxNumIterations.value:	100
+widget(FMR).MoCo.createMovies.checked:	false
+widget(FMR).MoCo.createExtendedLogFile.checked:	true
+widget(FMR).doMotionCorrection.checked:	true
+widget(FMR).doTemporalSmoothing.checked:	false
+widget(FMR).TGS.enabled:	false
+widget(FMR).TGS.TGSvalue.value:	20
+widget(FMR).TGS.TGSunit.currentText:	s
+widget(FMR).doTemporalHighPassFiltering.checked:	true
+widget(FMR).STC.enabled:	true
+widget(FMR).STC.sliceOrder.currentText:	1 - ascending interleaved odd-even
+widget(FMR).STC.stcInterpolationMethod.currentText:	Sinc
+widget(FMR).THP.enabled:	true
+widget(FMR).THP.THPvalue.value:	2
+widget(FMR).THP.THPunit.currentText:	cycles
+widget(FMR).FMR.enabled:	true
+widget(FMR).FMR.skipVols.value:	2
+widget(FMR).FMR.numSlices.value:	30
+widget(FMR).FMR.sizeX.value:	64
+widget(FMR).FMR.mosaicSizeY.value:	384
+widget(FMR).FMR.mosaicSizeX.value:	384
+widget(FMR).FMR.createAMR.checked:	true
+widget(FMR).FMR.sizeY.value:	64
+widget(FMR).FMR.byteSwap.checked:	false
+widget(FMR).FMR.bytesPerPixel.value:	2
+widget(FMR).FMR.numImgPerVol.value:	1
+widget(FMR).FMR.fileType.currentText:	DICOM
+widget(FMR).fmrDoSpatialSmoothing.checked:	false
+widget(FMR).doSliceTimeCorrection.checked:	true
+
+widget(VMR).vmrFileType.currentText:	DICOM
+widget(VMR).vmrNumSlices.value:	192
+widget(VMR).vmrIsLittleEndian.checked:	true
+widget(VMR).vmrSizeX.value:	256
+widget(VMR).vmrSizeY.value:	256
+widget(VMR).vmrBytesPerPixel.value:	2
+widget(VMR).makeISO.checked:	true
+widget(VMR).makeSAG.checked:	true
+widget(VMR).makeIIHC.checked:	false
+widget(VMR).makeTAL.checked:	false
+widget(VMR).vmrISOInterpolationMethod.currentText:	Cubic Spline
+
+widget(VTC).vtcSGS.enabled:	true
+widget(VTC).vtcSGS.vtcSGSvalue.value:	6
+widget(VTC).vtcSGS.vtcSGSunit.currentText:	mm
+widget(VTC).vtcDoSpatialSmoothing.checked:	true
+widget(VTC).vtcNotSpatialSmoothing.checked:	true
+widget(VTC).resolution.currentText:	3x3x3
+widget(VTC).vtcInterpolationMethod.currentText:	Trilinear
+widget(VTC).bboxThreshold.value:	100
+widget(VTC).vtcDataType.currentText:	Float
+widget(VTC).vtcMakeMTCs.checked:	false
+widget(VTC).vtcMakeSDMs.checked:	false
+widget(VTC).brainSpace.currentText:	TAL Space
+widget(VTC).vtcAlignToFirstRun.checked:	true
+
+widget(SDM).skipFirstPredictor.checked:	false
+widget(SDM).includeConstantCondition.checked:	true
+widget(SDM).sdmMakeMDMs.checked:	false
+widget(SDM).modelMotionAsConfound.checked:	true
+widget(SDM).numberOfPRTConfounds.value:	0
+
+widget(MDM).singleSubject.checked:	true
+widget(MDM).group.checked:	true
+widget(MDM).whichRuns.currentText:	All Runs
+widget(MDM).designType.currentText:	sdm
+widget(MDM).mdmType.currentText:	Volume Space
+widget(MDM).os.currentText:	Mac
+
+widget(MTC).samplingDepthWM.value:	-1
+widget(MTC).samplingDepthGM.value:	3
+widget(MTC).mtcTemplateSurfaceBool.checked:	false
+widget(MTC).mtcTemplateSurfacePathRH.text:	Right Hemisphere of Template Surface Mesh
+widget(MTC).mtcTemplateSurfacePathLH.text:	Left Hemisphere of Template Surface Mesh
+
+
+END OF PARAMETERS
