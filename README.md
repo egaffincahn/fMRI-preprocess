@@ -58,9 +58,9 @@ The precision of the sub-structure of all the data folders is a necessity to run
 RAW DATA FOLDER STRUCTURE:
 
 \<Encompassing Folder\>  
-> \<ExperimentName\>\<ExperimentNumber\>  
->> \<YYYMMDD\>  
->>> X\<SessionName\>  
+&nbsp;&nbsp;&nbsp;&nbsp;\<ExperimentName\>\<ExperimentNumber\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<YYYMMDD\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X\<SessionName\>  
 
 Notes:  
 • Experiment Name: This is the name of the umbrella experiment and the last part of the path name for your output folder path. Nothing else should be included in this folder name and it should not include any special characters. It is not the same as the individual experiment name, which is not included anywhere in the raw data folder structure; it is named by you and the appropriate raw data session is placed into that experiment name sub-folder.  
@@ -71,28 +71,28 @@ Notes:
 YOUR PERSONAL FOLDER STRUCTURE:
 
 \<Encompassing Folder\>
-> Anatomy  
->> SubX  
->>> \<DICOMs\>  
->>> \<VMRs\>  
-> \<ExperimentName\>  
->> \<ExperimentName\>\_PRTs  
->> FuncDicoms  
->>> SubX  
->>>> RunX  
->>>>> \<DICOMs\>  
->>>>> \<FMRs\>  
->> ProcessedData_Unsmoothed  
->> ProcessedData_SmoothedXFWHM  
->>> SubX  
->>>> RunX  
->>>>> \<VTCs\>  
->>>>> \<SDMs\>  
->>>>> \<MTCs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;Anatomy  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<DICOMs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<VMRs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;\<ExperimentName\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<ExperimentName\>\_PRTs  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FuncDicoms  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RunX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<DICOMs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<FMRs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProcessedData_Unsmoothed  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ProcessedData_SmoothedXFWHM  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RunX  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<VTCs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<SDMs\>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<MTCs\>  
 
 Notes:  
 • Experiment Name: This is the name of the experiment. Nothing else should be included in this folder name and it should not include any special characters  
-• Experiment PRTs: must be exact as shown above; ExperimentName must be the same for the PRT folder and the dicom folder. The PRTs must be named *<ExperimentName>*_*<ParticipantType>XXX*_*RunX*.prt, where the * represents ANY character and <ParticipantType> is Sub, Kid, or Adult, as chosen in the FMR tab. There may be any number of zeros between Sub and the subject number, as well as Run and the run number. Here, the subject number can be two things - the experiment-specific ID that starts at 1 and goes to however many subjects did the experiment, or the individual's unique fMRI ID. The one you want must be set in the FMR tab > General Settings section. Also, make sure that experiment name is the same as the Experiment Folder Name, and that it is followed by an underscore.  
+• Experiment PRTs: must be exact as shown above; ExperimentName must be the same for the PRT folder and the dicom folder. The PRTs must be named \*\<ExperimentName\>\*\_\*\<ParticipantType\>XXX\*\_\*RunX\*.prt, where the \* represents ANY character and <ParticipantType> is Sub, Kid, or Adult, as chosen in the FMR tab. There may be any number of zeros between Sub and the subject number, as well as Run and the run number. Here, the subject number can be two things - the experiment-specific ID that starts at 1 and goes to however many subjects did the experiment, or the individual's unique fMRI ID. The one you want must be set in the FMR tab > General Settings section. Also, make sure that experiment name is the same as the Experiment Folder Name, and that it is followed by an underscore.  
 • Subject (Dicoms and Processed): folder for each subject, can be Sub1, Sub01, 20130419_Sub001_blah, or any combination; the important thing is that there are only 0s between "Sub" and the subject number and than any character that follows the subject number is not also a number, obviously.  
 • Subject (Anatomy): When looking for raw anatomical files to preprocess, no experiment name will be given, so the script will search for the subject number somewhere in the subject-level anatomy folder followed by the subject's unique fMRI ID (ex. 20130813_PolarAngle23_Eccentricity41_Sub251). When searching for previously preprocessed anatomical files (as in the case of VTC or MTC creation), the script will search for <ExperimentName><Subject Number> (ex. IsoRetino10) to find the subject-level anatomy folder. This folder name can have anything before but not after the name/number combination, but can only have 0s in between name and number.  
 • Run: Run1, 20130419_Run01, same naming convention as the dicoms/processed data subject folders  
