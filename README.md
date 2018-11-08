@@ -70,7 +70,7 @@ Notes:
 
 YOUR PERSONAL FOLDER STRUCTURE:
 
-\<Encompassing Folder\>
+\<Encompassing Folder\>  
 &nbsp;&nbsp;&nbsp;&nbsp;Anatomy  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SubX  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<DICOMs\>  
